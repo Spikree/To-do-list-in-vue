@@ -15,7 +15,6 @@
 
         <div class="buttons">
         <button @click="$emit('added')">Add</button>
-        <button @click="$emit('close')">Task Complete</button>
         </div>  
     </div>
 </template>
@@ -75,9 +74,5 @@
 
         button:hover {
             background-color: #0056b3;
-        }
-        .buttons {
-            display: flex;
-            justify-content: space-between;
         }
 </style>

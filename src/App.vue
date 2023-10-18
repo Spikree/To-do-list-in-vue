@@ -17,17 +17,21 @@
 
 <div class="body">
 <ul class="list-group" v-if="tasks.length > 0">
-  <li class="list-group-item" v-for="(tasks, index) in tasks" :key="tasks">{{ tasks }} {{ index + 1 }}</li>
+  <PendingTask v-for="(tasks) in tasks" :key="tasks"/>
 </ul>
 </div>
+
+
 </template>
 
 <script>
 import AddTask from './components/AddTask.vue';
+import PendingTask from './components/PendingTask.vue';
 export default {
   name: 'App',
   components: {
-    AddTask
+    AddTask,
+    PendingTask
   },
   data() {
     return {
